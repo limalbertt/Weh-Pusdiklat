@@ -66,10 +66,16 @@
 							<img src="<?= base_url("assets/email.png"); ?>" width="25" data-toggle="tooltip" title="Buat Data Surat">
 						</a>
 					</td>
-
 					<td>
-						<a href="<?= base_url("root/pdf/") . $mhs['nim']; ?>" class="btn btn-sm" target="_blank">
-							<img src="<?= base_url("assets/printer.png"); ?>" width="25" data-toggle="tooltip" title="Cetak Surat">
+						<div class="dropdown show dropleft">
+							<a class="btn btn-light dropdown-toggle" href="<?= base_url("root/pdf/") . $mhs['nim']; ?>" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<img src="<?= base_url("assets/printer.png"); ?>" width="25" data-toggle="tooltip" title="Cetak Surat">
+							</a>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+								<a class="dropdown-item" href="<?= base_url("root/pdf/") . $mhs['nim']; ?>" class="btn btn-sm" target="_blank">Diterima</a>
+								<a class="dropdown-item" href="<?= base_url("root/pdf4/") . $mhs['nim']; ?>" class="btn btn-sm" target="_blank">Ditolak</a>
+							</div>
+						</div>
 					</td>
 					<td>
 						<a href="<?= base_url("root/hapus/") . $mhs['nim'] . "/" . $mhs['surat_magang'] . "/" . $mhs['khs']; ?>" class="btn btn-sm " data-toggle="tooltip" title="Hapus Data" onclick="return confirm(`Yakin ingin menghapus?`)">
@@ -81,3 +87,6 @@
 		</tbody>
 	</table>
 </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
